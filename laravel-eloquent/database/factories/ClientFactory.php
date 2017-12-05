@@ -35,6 +35,8 @@ $factory->state(\App\Models\Client::class,\App\Models\Client::TYPE_LEGAL, functi
     ];
 });
 
+
+// esta foi inserida depois da aula 5
 $factory->define(App\Models\ClientProfile::class, function (Faker $faker){
     return [
         'field' => $faker->name

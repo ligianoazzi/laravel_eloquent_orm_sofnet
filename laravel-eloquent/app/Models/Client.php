@@ -27,14 +27,26 @@ class Client extends Model
 		'physical_disability',
 		'company_name',
 		'client_type',
+		'soccer_team_id'
 	];
+	// 'soccer_team_id' foi inserido na aula 5
 
 
 	// mapeando o relacionamento entre cliente e time
 	public function soccerTeam(){ // many-to-one
+	
 		return $this->belongsTo(SoccerTeam::class);
+	
 	}
 	// se a tabela referente a esta model ( tabela clients), tivesse 
+	// um time pode ter vários clientes
+	// cada cliente em um time
+	// cada cliente tem uma fk de time
+
+	//um time pode está contido em vários clientes e um cliente obrigatoriamente tem um time
+
+
+
 
 
 }
