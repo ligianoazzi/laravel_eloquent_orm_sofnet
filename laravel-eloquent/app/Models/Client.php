@@ -28,4 +28,13 @@ class Client extends Model
 		'company_name',
 		'client_type',
 	];
+
+
+	// mapeando o relacionamento entre cliente e time
+	public function soccerTeam(){ // many-to-one
+		return $this->belongsTo(SoccerTeam::class);
+	}
+	// se a tabela referente a esta model ( tabela clients), tivesse 
+
+
 }
