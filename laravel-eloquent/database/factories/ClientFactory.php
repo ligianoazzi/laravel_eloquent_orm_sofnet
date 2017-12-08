@@ -10,6 +10,8 @@ $factory->define(App\Models\Client::class, function (Faker $faker){
         'email' => $faker->email,
         'phone' => $faker->phoneNumber,
         'defaulter' => rand(0, 1),
+        'soccer_team_id' => rand(1,SoccerTeamsTableSeeder::MAX_ROWS)
+        // isso pq eu sei que é esse o nro de inserts que eu tenho no factory de times
         //'soccer_team_id' => rand(1,SoccerTeamsTableSeeder::MAX_ROWS)
     ];
 });

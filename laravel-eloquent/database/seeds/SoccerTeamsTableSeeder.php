@@ -2,8 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class SoccerTeamsTableSeeder extends Seeder
 {
+	const MAX_ROWS = 100;
     /**
      * Run the database seeds.
      *
@@ -11,7 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(SoccerTeamsTableSeeder::class);
-        $this->call(ClientsTableSeeder::class);
+        factory(\App\Models\SoccerTeam::class,self::MAX_ROWS)->create();
     }
 }
